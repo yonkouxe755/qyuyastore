@@ -1752,3 +1752,13 @@ RESPONSIVE HP
         0 0 20px rgba(157,78,221,.35);
 
 }
+
+.products {
+    padding-bottom: 10px !important;
+    margin-bottom: 0 !important;
+}
+
+.custom-section {
+    margin-top: 5px !important;
+    padding-top: 10px !important;
+}
