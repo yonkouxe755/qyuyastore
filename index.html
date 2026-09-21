@@ -38,7 +38,6 @@ content="width=device-width, initial-scale=1.0">
     </nav>
 </header>
 
-
 <section class="products" id="produk">
 
     <h2>TOP UP ROBUX</h2>
@@ -198,100 +197,84 @@ content="width=device-width, initial-scale=1.0">
             id="nominal"
             readonly>
 
-        <h3 class="admin-title">Pilih Admin</h3>
+        <h3 class="admin-title">Admin</h3>
 
-<div class="admin-list">
+        <div class="admin-list">
 
-    <!-- Admin 1 -->
-    <div class="admin-option" onclick="pilihAdmin(1,this)">
+            <div class="admin-option active">
 
-        <div class="avatar">🦊</div>
+                <div class="avatar">🦊</div>
 
-        <div class="admin-info">
-            <h4>May</h4>
-            <p>💜 Online</p>
+                <div class="admin-info">
+                    <h4>Qyuya</h4>
+                    <p> Online</p>
+                </div>
+
+                <span class="status">🟢</span>
+
+            </div>
+
         </div>
 
-        <span class="status">🟢</span>
+        <input type="hidden" id="adminTerpilih" value="Qyuya">
 
-    </div>
+        <h3 class="admin-title">Pilih Pembayaran</h3>
 
-    <!-- Admin 2 -->
-    <div class="admin-option" onclick="pilihAdmin(2,this)">
+        <div class="payment-select" onclick="togglePayment()">
 
-        <div class="avatar">🐉</div>
+            <span id="paymentText">
+                Pilih metode pembayaran
+            </span>
 
-        <div class="admin-info">
-            <h4>qyuya</h4>
-            <p>💙 Online</p>
+            <span>
+                ▼
+            </span>
+
         </div>
 
-        <span class="status">🟢</span>
+        <div class="payment-dropdown" id="paymentDropdown">
 
-    </div>
+            <div onclick="pilihPembayaran('Dana')">
+                Dana
+            </div>
 
-</div>
+            <div onclick="pilihPembayaran('OVO')">
+                OVO
+            </div>
 
-<input type="hidden" id="adminTerpilih">
+            <div onclick="pilihPembayaran('GoPay')">
+                GoPay
+            </div>
 
-<h3 class="admin-title">Pilih Pembayaran</h3>
+            <div onclick="pilihPembayaran('QRIS')">
+                QRIS
+            </div>
 
-<div class="payment-select" onclick="togglePayment()">
+            <div onclick="pilihPembayaran('Transfer Bank')">
+                Transfer Bank
+            </div>
 
-    <span id="paymentText">
-        Pilih metode pembayaran
-    </span>
+        </div>
 
-    <span>
-        ▼
-    </span>
-
-</div>
-
-
-<div class="payment-dropdown" id="paymentDropdown">
-
-    <div onclick="pilihPembayaran('Dana')">
-        Dana
-    </div>
-
-    <div onclick="pilihPembayaran('OVO')">
-        OVO
-    </div>
-
-    <div onclick="pilihPembayaran('GoPay')">
-        GoPay
-    </div>
-
-    <div onclick="pilihPembayaran('QRIS')">
-        QRIS
-    </div>
-
-    <div onclick="pilihPembayaran('Transfer Bank')">
-        Transfer Bank
-    </div>
-
-</div>
-
-
-<input type="hidden" id="payment">
+        <input type="hidden" id="payment">
 
         <button class="chat-btn" onclick="kirimWhatsapp()">
-    Chat Sekarang
-</button>
+            Chat Sekarang
+        </button>
 
     </div>
 
 </div>
 
 <!-- Floating WhatsApp -->
-<a href="https://wa.me/6282265057169"
+<a href="https://wa.me/628133240038"
    class="floating-wa"
    target="_blank">
 
     💬
 
 </a>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="js/script.js"></script>
 
