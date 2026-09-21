@@ -35,8 +35,8 @@ function beliCustom(){
         return;
     }
 
-    // Harga tetap Rp160 per Robux
-    const hargaPerRobux = 160;
+    // Harga tetap Rp150 per Robux
+    const hargaPerRobux = 150;
 
     const total = robux * hargaPerRobux;
 
@@ -55,12 +55,8 @@ function pilihProduk(nominal){
     // Reset username
     document.getElementById("username").value = "";
 
-    // Reset admin
-    document.getElementById("adminTerpilih").value = "";
-
-    document.querySelectorAll(".admin-option").forEach(card=>{
-        card.classList.remove("selected");
-    });
+    // Admin otomatis Qyuya
+    document.getElementById("adminTerpilih").value = "Qyuya";
 
     // Reset pembayaran
     document.getElementById("payment").value = "";
@@ -71,18 +67,6 @@ function pilihProduk(nominal){
 function closePopup(){
 
     document.getElementById("popupOrder").style.display = "none";
-
-}
-
-function pilihAdmin(admin, element){
-
-    document.querySelectorAll(".admin-option").forEach(card=>{
-        card.classList.remove("active");
-    });
-
-    element.classList.add("active");
-
-    document.getElementById("adminTerpilih").value = admin;
 
 }
 
@@ -100,30 +84,9 @@ if(username=="" || nominal=="" || payment==""){
 
 }
 
-const adminTerpilih = document.getElementById("adminTerpilih").value;
-
-if(adminTerpilih == ""){
-
-    alert("Silakan pilih admin terlebih dahulu!");
-
-    return;
-
-}
-
-let nomor = "";
-let admin = "";
-
-if(adminTerpilih == "1"){
-
-    nomor = "6281278363732"; // Nomor Admin May
-    admin = "Admin May";
-
-}else if(adminTerpilih == "2"){
-
-    nomor = "6282265057169"; // Nomor Admin Qyuya
-    admin = "Admin Qyuya";
-
-}
+// Admin tetap
+const nomor = "628133240038";
+const admin = "Qyuya";
 
 let pesan =
 `Halo ${admin} 👋
@@ -173,7 +136,6 @@ function togglePayment(){
     : "block";
 
 }
-
 
 function pilihPembayaran(nama){
 
