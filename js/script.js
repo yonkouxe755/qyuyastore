@@ -35,8 +35,8 @@ function beliCustom(){
         return;
     }
 
-    // Harga tetap Rp150 per Robux
-    const hargaPerRobux = 150;
+    // Harga tetap Rp160 per Robux
+    const hargaPerRobux = 160;
 
     const total = robux * hargaPerRobux;
 
@@ -156,8 +156,8 @@ if (customInput && customHarga) {
 
         const robux = parseInt(customInput.value) || 0;
 
-        // Harga tetap Rp150 per Robux
-        const hargaPerRobux = 150;
+        // Harga tetap Rp160 per Robux
+        const hargaPerRobux = 160;
 
         const total = robux * hargaPerRobux;
 
